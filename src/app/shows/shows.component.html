@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col" *ngFor = "let show of shows.results; let i=index">
         <div *ngIf="i<6" class="card" style="width: 18rem;">
-            <img src="'https://image.tmdb.org/t/p/w185' + {{show.backdrop_path}}" class="card-img-top" alt="...">
+            <img [src]="'https://image.tmdb.org/t/p/w185' + show.backdrop_path" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">{{show.name}}</h5>
                 <p>Release date: {{show.first_air_date}}</p>
